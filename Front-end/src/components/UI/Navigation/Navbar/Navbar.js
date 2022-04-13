@@ -83,7 +83,7 @@ const Navbar = ()=>{
 
     <nav className=" navbar navbar-expand-lg sticky-top ">
 
-    <NavLink to="/home/all" className="navbar-brand"><Logo/></NavLink>
+    <NavLink to="/home/all" className="navbar-brand"></NavLink>
 
         <button className="navbar-toggler" type="button" data-toggle="collapse" 
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
