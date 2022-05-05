@@ -293,7 +293,7 @@ render() {
             render={renderProps => (
             <button onClick={renderProps.onClick} 
                     disabled={renderProps.disabled} 
-                    className="google-btn"> <Google_logo/>  Continue using google</button>
+                    className="google-btn"> <Google_logo /> &nbsp;  Continue with google</button>
             
             )}
             buttonText="Login"
@@ -301,35 +301,8 @@ render() {
             onFailure={this.FailResponseGoogle}
             cookiePolicy={'single_host_origin'}/>
 
-          <p className="devider-or">OR</p>
-        <form onSubmit={this.formHandler} >
-        
-            {
-                formElementsArray.map(x=> (
-
-                  <Input 
-                    key={x.id}
-                    placeholder={x.config.placeholder}
-                    value={x.config.value}
-                    type={x.config.type}
-                    invalid={!x.config.valid}
-                    touched={x.config.touched}
-                    errors={x.config.error}
-                    msg={x.config.msg}
-                    blur={(event)=> this.inputBlurHandler(event,x.id)}
-                    changed={(event)=> this.inputchangeHandler(event,x.id)}/>
-
-                ))
-            }
-            <Link to="/forgotpasswordemail"> 
-            <p className="forgot-password"  > Forgot Password?</p></Link>
-
-            {LoginSumbitButton}
-           <p className="account-login"><Link to='/signup'>  New User? Sign up</Link></p>
          
-
-               
-        </form> 
+        
         </div>
     );
         

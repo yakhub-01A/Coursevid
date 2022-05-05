@@ -51,6 +51,24 @@
   color: #08bd80;
 }
 
+.buttons__box{
+  display: flex;
+}
+
+.coursecard__btnactive{
+  background: #2D81F7;
+  border: 0.5px solid #2D81F7;
+  font: normal normal 400 17px/20px Gilroy;
+  letter-spacing: 0.47px;
+  color: #fff;
+  border-radius:5px ;
+  margin-left:10px;
+  width: 50%;
+}
+
+
+
+
 .active-category {
   width: 100%;
   background: #08bd80 0% 0% no-repeat padding-box !important;

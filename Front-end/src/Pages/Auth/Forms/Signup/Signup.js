@@ -354,7 +354,7 @@ inputBlurHandler = (event,inputIdentifier)=> {
                 render={renderProps => (
                 <button onClick={renderProps.onClick} 
                         disabled={renderProps.disabled} 
-                        className="google-btn"> <Google_logo/> Signup using google</button>
+                        className="google-btn"> <Google_logo/> &nbsp; Signup using google</button>
             
             )}
             buttonText="Login"
@@ -362,28 +362,10 @@ inputBlurHandler = (event,inputIdentifier)=> {
             onFailure={this.FailResponseGoogle}
             cookiePolicy={'single_host_origin'}/>
 
-              <p className="devider-or">OR</p>
+            
             <form onSubmit={this.formHandler} >
             
-                {
-                    formElementsArray.map(x=> (
-
-                      <Input 
-                        key={x.id}
-                        placeholder={x.config.placeholder}
-                        value={x.config.value}
-                        type={x.config.type}
-                        invalid={!x.config.valid}
-                        touched={x.config.touched}
-                        errors={x.config.error}
-                        msg={x.config.msg}
-                        blur={(event)=> this.inputBlurHandler(event,x.id)}
-                        changed={(event)=> this.inputchangeHandler(event,x.id)}/>
-
-                    ))
-                }
-               
-                {SigninSumbitButton}
+                
               <p className="account-login"> Already have an account?  <Link to="/login"> 
               Login</Link></p>
                  
