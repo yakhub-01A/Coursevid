@@ -378,7 +378,7 @@ inputBlurHandler = (event,inputIdentifier)=> {
                 {alertContent}
                 <div className="SideContent">
                         <MainPage 
-                            shelp={true}
+                            coursevid={true}
                             heading1={"Start your"}
                             heading2={"learning with"}/>
                             {form}

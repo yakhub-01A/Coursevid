@@ -5,13 +5,13 @@ import circle from '../../../assets/Images/circle12.svg';
 
 const mainPage = (props)=> {
 
-    let shelp = null;
+    let coursevid = null;
 
-    if(props.shelp){
+    if(props.coursevid){
             
-            shelp = (<>
-                        <br/><span className="heading-3">S-</span>
-                        <span className="heading-4">HELP</span>
+            coursevid = (<>
+                        <br/><span className="heading-3">Course-</span>
+                        <span className="heading-4">vid</span>
                     </>); 
 
                   }
@@ -23,7 +23,7 @@ const mainPage = (props)=> {
                 <h1 className="Content-text"><span className="heading-1">{props.heading1}</span> 
                 <br/><span className="heading-2">{props.heading2}</span>
 
-               {shelp} 
+               {coursevid} 
 
                 <div className="MainPageback">
                         {/* <img className="circle1" src={circle1} alt="circle1"/>

@@ -313,7 +313,7 @@ render() {
                     <div className="SideContent">
                         
                         <MainPage
-                        shelp={true}
+                        coursevid={true}
                         heading1={"Resume your"}
                         heading2={"learning with"}/>
 
