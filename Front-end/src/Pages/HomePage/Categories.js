@@ -17,13 +17,13 @@ const Categories =(props)=>{
 
             <div className="ListOfCourses">
                   <NavLink to='/home/all' activeClassName="active-category" >All Courses</NavLink>
-                  <NavLink to='/home/Web Development' activeClassName="active-category">Web Development </NavLink>
-                  <NavLink to='/home/Web Designing' activeClassName="active-category" >Web Designing </NavLink>
-                  <NavLink to='/home/React' activeClassName="active-category">React </NavLink>
-                  <NavLink to='/home/Photography' activeClassName="active-category">Photography</NavLink>
-                  <NavLink to='/home/IOT' activeClassName="active-category">IOT </NavLink>
-                  <NavLink to='/home/ML' activeClassName="active-category">Machine Learning</NavLink>
-                   <NavLink to='/home/NodeJs' activeClassName="active-category">NodeJs</NavLink>
+                  <NavLink to='/home/Engineering Basket' activeClassName="active-category">Engineering Basket </NavLink>
+                  <NavLink to='/home/English Basket' activeClassName="active-category" >English Basket </NavLink>
+                  <NavLink to='/home/Programe core or elective Basket' activeClassName="active-category">Programe core or elective Basket </NavLink>
+                  <NavLink to='/home/Softskills Basket' activeClassName="active-category">Softskills Basket</NavLink>
+                  <NavLink to='/home/Management Basket' activeClassName="active-category">Management Basket </NavLink>
+                  <NavLink to='/home/Science Basket' activeClassName="active-category">Science Basket</NavLink>
+                   <NavLink to='/home/Humanities Basket' activeClassName="active-category">Humanities Basket</NavLink>
                   <NavLink to='/home/preferences' className="recommended" 
                   activeClassName="active-category">Recommended!</NavLink>
                 
@@ -39,13 +39,13 @@ const Categories =(props)=>{
 
                 <div className='CategoriesSlider'>
                  <NavLink to='/home/all' activeClassName="Sactive-category" >All Courses</NavLink>
-                  <NavLink to='/home/Web Development' activeClassName="Sactive-category">Web Development </NavLink>
-                  <NavLink to='/home/Web Designing' activeClassName="Sactive-category" >Web Designing </NavLink>
-                  <NavLink to='/home/React' activeClassName="Sactive-category">React </NavLink>
-                  <NavLink to='/home/Photography' activeClassName="Sactive-category">Photography</NavLink>
-                  <NavLink to='/home/IOT' activeClassName="Sactive-category">IOT </NavLink>
-                  <NavLink to='/home/ML' activeClassName="Sactive-category">Machine Learning</NavLink>
-                   <NavLink to='/home/NodeJs' activeClassName="Sactive-category">NodeJs</NavLink>
+                  <NavLink to='/home/Engineering Basket' activeClassName="Sactive-category">Engineering Basket </NavLink>
+                  <NavLink to='/home/English Basket' activeClassName="Sactive-category" >English Basket </NavLink>
+                  <NavLink to='/home/Programe core or elective Basket' activeClassName="Sactive-category">Programe core or elective Basket </NavLink>
+                  <NavLink to='/home/Softskills Basket' activeClassName="Sactive-category">Softskills Basket</NavLink>
+                  <NavLink to='/home/Management Basket' activeClassName="Sactive-category">Management Basket </NavLink>
+                  <NavLink to='/home/Science Basket' activeClassName="Sactive-category">Science Basket</NavLink>
+                   <NavLink to='/home/Humanities Basket' activeClassName="Sactive-category">Humanities Basket</NavLink>
                   <NavLink to='/home/preferences' className="recommended" 
                   activeClassName="active-category">Recommended!</NavLink>
             </div>

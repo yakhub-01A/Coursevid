@@ -9,24 +9,6 @@ class HomepageBanner extends Component{
         let text=null;
         let Banner=null;
 
-        if(this.props.img === 'all'){
-             text = ( <p className="Banner-text">Best place to <br/>learn new things</p> );
-             Banner=( <div className="BannerSection">
-
-             <img className="BannerImage" 
-             src={Url + this.props.img +".jpg"} alt="banner1"/>
-
-            </div>);
-            }
-
-        if(this.props.img){
-            Banner=( <div className="BannerSection">
-
-                     <img className="BannerImage" 
-                     src={"https://shelp-webapp.herokuapp.com/" + this.props.img +".jpg"} alt="banner1"/>
-
-                    </div>);
-        }
 
         if(this.props.img === null){
             

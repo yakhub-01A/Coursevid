@@ -20,10 +20,10 @@ const CourseCards =(props)=>{
                             <span className="CourseTimesUpdated">({props.ratingtimesUpdated} ratings)</span>
                             <span className="Course-Price">₹ {props.price}</span>
                           </p>
-                          <div className="buttons__box" >
+                          {/* <div className="buttons__box" >
                             <button className="coursecard__btnactive">Watch Demo</button>
                             <button className="coursecard__btnactive">Enroll Now!</button>
-                          </div>
+                          </div> */}
                       </div>
                </div>
       );

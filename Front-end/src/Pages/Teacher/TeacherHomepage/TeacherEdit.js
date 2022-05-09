@@ -76,12 +76,13 @@ class TeacherPage extends Component{
                     required: true,
                   
                 },
-                "Web Development":false,
-                "React" : false,
-                "ML": false,
-                "Web Designing": false,
-                "NodeJs":false,
-                "Photography":false,
+                "Engineering Basket":false,
+                "Programe core or elective Basket" : false,
+                "Science Basket": false,
+                "Management Basket": false,
+                "Humanities Basket":false,
+                "Softskills Basket":false,
+                "English Basket":false,
 
                 
             
@@ -120,7 +121,7 @@ class TeacherPage extends Component{
                 label: "What will the students learn from this?",
                 rows: "5",
                 cols: "70",
-                placeholder: 'students will learnt to apply react skills...',
+                placeholder: 'students will learnt to apply skills...',
                 value: "",
                 validation: {
                     required: true,
@@ -166,8 +167,8 @@ class TeacherPage extends Component{
         alertType:" ",
         
     },
-    CourseNames:["Web Development","React", "ML","Web Designing","NodeJs",
-                "Photography"],
+    CourseNames:["Engineering Basket","Programe core or elective Basket", "Science Basket","Management Basket","Humanities Basket",
+                "Softskills Basket","English Basket"],
     isLoggedIn:false,
     userName:"",
     alertPressed:false,
@@ -414,12 +415,13 @@ class TeacherPage extends Component{
         let requirement=null;
         let file= '';
    //     let fileName=null;
-        let classWeb=[];
-        let classWebDesign=[];
-        let classReact=[];
-        let classML=[];
-        let classNodeJs=[];
-        let classPhotography=[];
+        let classEngineering_Basket=[];
+        let classManagement_Basket=[];
+        let classEnglish_Basket=[];
+        let classPrograme_core_elective_Basket=[];
+        let classScience_Basket=[];
+        let classHumanities_Basket=[];
+        let classSoftskills_Basket=[];
         let Welcome = null;
         let alertContent = null;
         let price=null;
@@ -430,39 +432,45 @@ class TeacherPage extends Component{
         }
         
 
-        if(this.state.Form.category['Web Development']){
-            classWeb=['ButtonClicked']
-            //console.log("clicked11",classWeb.join(' '),this.state.Form.category['Web Development'])
+        if(this.state.Form.category['Engineering Basket']){
+            classEngineering_Basket=['ButtonClicked']
+            //console.log("clicked11",classEngineering_Basket.join(' '),this.state.Form.category['Engineering Basket'])
         }
-        else classWeb=[];
+        else classEngineering_Basket=[];
 
-         if(this.state.Form.category['Web Designing']){
-            classWebDesign=['ButtonClicked']
+         if(this.state.Form.category['Management Basket']){
+            classManagement_Basket=['ButtonClicked']
             
         }
-        else classWebDesign=[];
+        else classManagement_Basket=[];
     
-        if(this.state.Form.category['ML']){
-            classML=['ButtonClicked']
+         if(this.state.Form.category['Science Basket']){
+            classScience_Basket=['ButtonClicked']
         }
-        else classML=[];
+        else classScience_Basket=[];
 
 
-         if(this.state.Form.category['React']){
-            classReact=['ButtonClicked']
+         if(this.state.Form.category['Programe core or elective Basket']){
+            classPrograme_core_elective_Basket=['ButtonClicked']
         }
-        else classReact=[];
+        else classPrograme_core_elective_Basket=[];
 
-         if(this.state.Form.category['Photography']){
-            classPhotography=['ButtonClicked']
+         if(this.state.Form.category['Softskills Basket']){
+            classSoftskills_Basket=['ButtonClicked']
         }
-        else classPhotography=[];
+        else classSoftskills_Basket=[];
 
 
-        if(this.state.Form.category['NodeJs']){
-            classNodeJs=['ButtonClicked']
+         if(this.state.Form.category['Humanities Basket']){
+            classHumanities_Basket=['ButtonClicked']
         }
-        else classNodeJs=[];
+        else classHumanities_Basket=[];
+        
+         if(this.state.Form.category['English Basket']){
+            classEnglish_Basket=['ButtonClicked']
+            
+        }
+        else classEnglish_Basket=[];
 
        
 
@@ -552,13 +560,13 @@ class TeacherPage extends Component{
 
                     <div className="Teacher-Courses-Buttons">
 
-                        <button onClick={()=> this.categoryHandler("Web Development")} className={classWeb.join(' ')} > Development</button>
-                        <button className={classWebDesign.join(' ')} onClick={()=> this.categoryHandler("Web Designing")}> Designing</button>
-                        <button className={classReact.join(' ')} onClick={()=> this.categoryHandler("React")}> React</button>
-                        <button className={classML.join(' ')} onClick={()=> this.categoryHandler("ML")}> ML</button>
-                        <button className={classPhotography.join(' ')} onClick={()=> this.categoryHandler("Photography")}> Photography</button>
-                        <button className={classNodeJs.join(' ')} onClick={()=> this.categoryHandler("NodeJs")}> Node JS</button>
-                        
+                        <button onClick={()=> this.categoryHandler("Engineering Basket")} className={classEngineering_Basket.join(' ')} > Engineering Basket</button>
+                        <button className={classManagement_Basket.join(' ')} onClick={()=> this.categoryHandler("Management Basket")}> Management Basket</button>
+                        <button className={classPrograme_core_elective_Basket.join(' ')} onClick={()=> this.categoryHandler("Programe core or elective Basket")}> Programe core or elective Basket</button>
+                        <button className={classScience_Basket.join(' ')} onClick={()=> this.categoryHandler("Science Basket")}> Science Basket</button>
+                        <button className={classSoftskills_Basket.join(' ')} onClick={()=> this.categoryHandler("Softskills Basket")}> Softskills Basket</button>
+                        <button className={classHumanities_Basket.join(' ')} onClick={()=> this.categoryHandler("Humanities Basket")}> Humanities Basket</button>
+                        <button className={classEnglish_Basket.join(' ')} onClick={()=> this.categoryHandler("English Basket")}> English Basket</button>
                     </div>
 
                     </div>    
