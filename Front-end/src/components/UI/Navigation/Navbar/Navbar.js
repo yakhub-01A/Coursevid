@@ -102,14 +102,14 @@ const Navbar = ()=>{
                   </a>
                   <div className="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                      <NavLink  className="dropdown-item" to='/home/all' activeClassName="active-categoryMenu" >All Courses</NavLink>
-                      <NavLink className="dropdown-item" to='/home/Web Development' activeClassName="active-categoryMenu">Web Development </NavLink>
-                      <NavLink className="dropdown-item" to='/home/Web Designing' activeClassName="active-categoryMenu" >Web Designing </NavLink>
-                      <NavLink className="dropdown-item" to='/home/React' activeClassName="active-categoryMenu">React</NavLink>
-                      <NavLink className="dropdown-item" to='/home/NodeJs' activeClassName="active-categoryMenu">NodeJs</NavLink>
-                      <NavLink className="dropdown-item" to='/home/ML' activeClassName="active-categoryMenu">Machine Learning </NavLink>
-                      <NavLink className="dropdown-item" to='/home/Photography' activeClassName="active-categoryMenu">Photography</NavLink>
-                      <NavLink className="dropdown-item" to='/home/IOT' activeClassName="active-categoryMenu">IOT </NavLink>
+                  <NavLink  className="dropdown-item" to='/home/all' activeClassName="active-categoryMenu" >All Courses</NavLink>
+                  <NavLink className="dropdown-item" to='/home/Engineering Basket' activeClassName="active-categoryMenu">Engineering Basket </NavLink>
+                  <NavLink className="dropdown-item" to='/home/English Basket' activeClassName="active-categoryMenu" >English Basket </NavLink>
+                  <NavLink className="dropdown-item" to='/home/Programe core or elective Basket' activeClassName="active-categoryMenu">Programe core or elective Basket </NavLink>
+                  <NavLink className="dropdown-item" to='/home/Softskills Basket' activeClassName="active-categoryMenu">Softskills Basket</NavLink>
+                  <NavLink className="dropdown-item" to='/home/Management Basket' activeClassName="active-categoryMenu">Management Basket </NavLink>
+                  <NavLink className="dropdown-item" to='/home/Science Basket' activeClassName="active-categoryMenu">Science Basket</NavLink>
+                  <NavLink className="dropdown-item" to='/home/Humanities Basket' activeClassName="active-categoryMenu">Humanities Basket</NavLink>
                     
                   </div>
               </li>

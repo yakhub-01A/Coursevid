@@ -13,22 +13,25 @@ class Preference extends Component {
         userId:localStorage.getItem('userId'),
 
         Courses: {
-            "Web Development":{
+            "Engineering Basket":{
                 touched:false,
             },
-            "Web Designing":{
+            "English Basket":{
                 touched:false,
             },
-             "React":{
+             "Humanities Basket":{
                 touched:false,
             },
-             "ML":{
+             "Softskills Basket":{
                 touched:false,
             },
-             "Photography":{
+             "Management Basket":{
                 touched:false,
             },
-             "NodeJs":{
+             "Programe core or elective Basket":{
+                touched:false,
+            },
+            "Science Basket":{
                 touched:false,
             },
         },
@@ -135,46 +138,52 @@ AlertError(alertmsg, alertType) {
         }
   
 
-            var webdev ,webdesigning,react,ml,photo,nodejs;
+            var engbas ,englbas,humbas,softbas,mgtbas,programe_core_elective_bas,science_bas;
 
-            if(this.state.Courses["Web Development"].touched){
-                webdev = ['touched']
+            if(this.state.Courses["Engineering Basket"].touched){
+                engbas = ['touched']
             }
             else{
-                webdev=['']
-            }
-
-            if(this.state.Courses["Web Designing"].touched){
-                webdesigning = ['touched']
-            }
-            else{
-                webdesigning=['']
-            }
-            if(this.state.Courses["React"].touched){
-                react= ['touched']
-            }
-            else{
-                react=['']
-            }
-            if(this.state.Courses["ML"].touched){
-                ml = ['touched']
-            }
-            else{
-                ml=['']
-            }
-            if(this.state.Courses["Photography"].touched){
-               photo= ['touched']
-            }
-            else{
-                photo=['']
-            }
-            if(this.state.Courses["NodeJs"].touched){
-                nodejs = ['touched']
-            }
-            else{
-                nodejs=['']
+                engbas=['']
             }
 
+            if(this.state.Courses["English Basket"].touched){
+                englbas = ['touched']
+            }
+            else{
+                englbas=['']
+            }
+            if(this.state.Courses["Humanities Basket"].touched){
+                humbas= ['touched']
+            }
+            else{
+                humbas=['']
+            }
+            if(this.state.Courses["Softskills Basket"].touched){
+                softbas = ['touched']
+            }
+            else{
+                softbas=['']
+            }
+            if(this.state.Courses["Management Basket"].touched){
+               mgtbas= ['touched']
+            }
+            else{
+                mgtbas=['']
+            }
+            if(this.state.Courses["Programe core or elective Basket"].touched){
+                programe_core_elective_bas = ['touched']
+            }
+            else{
+                programe_core_elective_bas=['']
+            }
+
+            if(this.state.Courses["Science Basket"].touched){
+                science_bas = ['touched']
+            }
+            else{
+                science_bas=['']
+            }
             if(this.state.alert.valid){
 
                 alertContent = ( <Alert value={this.state.alertPressed}         
@@ -195,12 +204,13 @@ AlertError(alertmsg, alertType) {
                 </div>
                 <div className="Preference-buttons">
 
-                    <button className={webdev.join(' ')} onClick={()=> this.categoryHandler("Web Development")}> Development</button>
-                    <button className={webdesigning.join(' ')} onClick={()=> this.categoryHandler("Web Designing")}> Designing</button>
-                    <button className={react.join(' ')} onClick={()=> this.categoryHandler("React")}> React</button>
-                    <button className={ml.join(' ')} onClick={()=> this.categoryHandler("ML")}> ML</button>
-                    <button className={photo.join(' ')} onClick={()=> this.categoryHandler("Photography")}> Photography</button>
-                    <button className={nodejs.join(' ')} onClick={()=> this.categoryHandler("NodeJs")}> Node JS</button>
+                    <button className={engbas.join(' ')} onClick={()=> this.categoryHandler("Engineering Basket")}> Engineering Basket</button>
+                    <button className={englbas.join(' ')} onClick={()=> this.categoryHandler("English Basket")}> English Basket</button>
+                    <button className={humbas.join(' ')} onClick={()=> this.categoryHandler("Humanities Basket")}> Humanities Basket</button>
+                    <button className={softbas.join(' ')} onClick={()=> this.categoryHandler("Softskills Basket")}> Softskills Basket</button>
+                    <button className={mgtbas.join(' ')} onClick={()=> this.categoryHandler("Management Basket")}> Management Basket</button>
+                    <button className={science_bas.join(' ')} onClick={()=> this.categoryHandler("Science Basket")}> Science Basket</button>
+                    <button className={programe_core_elective_bas.join(' ')} onClick={()=> this.categoryHandler("Programe core or elective Basket")}> Programe core or elective Basket</button>
                    
                 </div>
 
