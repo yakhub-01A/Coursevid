@@ -40,9 +40,9 @@
     font: normal normal 400 17px/20px Gilroy;
     letter-spacing: 0.47px;
     color: #FFFFFF;
-    background: #2D81F7 0% 0% no-repeat padding-box;
+    background: #2d81f7 0% 0% no-repeat padding-box;
     border-radius: 8px;
-    opacity: 1;
+    opacity: 1.2;
     margin-left:10px;
 }
 .fa-heart{
@@ -74,7 +74,7 @@
 
 .btnactive{
     background: #FCFCFC 0% 0% no-repeat padding-box;
-    border: 0.5px solid #2674E2;
+    border: 0.5px solid #2d81f7;
     border-radius: 8px;
     font: normal normal 400 17px/20px Gilroy;
     letter-spacing: 0.47px;
@@ -98,7 +98,7 @@
 }
 
 .dropdown-item:active{
-    background:#08BD80 !important;
+    background:#A15589 !important;
 }
 
 

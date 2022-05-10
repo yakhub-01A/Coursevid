@@ -288,10 +288,10 @@ render() {
     let form = (
       <div className="login-form">
       
-          <GoogleLogin
+          <GoogleLogin 
             clientId="733452814548-ohrv12shdkpql5sm0g1j7illv3fa79fb.apps.googleusercontent.com"
             render={renderProps => (
-            <button onClick={renderProps.onClick} 
+            <button theme="dark" onClick={renderProps.onClick} 
                     disabled={renderProps.disabled} 
                     className="google-btn"> <Google_logo /> &nbsp;  Continue with google</button>
             

@@ -3,6 +3,7 @@
   letter-spacing: 0.5px;
   color: #3c4852;
   opacity: 1;
+  padding-bottom: 5px;
 }
 
 .ListOfCourses > * {
@@ -46,9 +47,9 @@
   display: none;
 }
 .Sactive-category {
-  border: 1px solid #08bd80;
+  border: 1px solid #A15589;
   background: rgba(8, 189, 129, 0.116);
-  color: #08bd80;
+  color: #A15589;
 }
 
 .buttons__box{
@@ -66,12 +67,9 @@
   width: 50%;
 }
 
-
-
-
 .active-category {
   width: 100%;
-  background: #08bd80 0% 0% no-repeat padding-box !important;
+  background: #A15589 0% 0% no-repeat padding-box !important;
   border-radius: 8px;
   opacity: 1;
   padding: 4px;
@@ -81,13 +79,17 @@
   color: white;
   opacity: 1;
 }
+.active-category:active{
+  background:#A15589 !important;
+}
 .ListOfCourses > *:hover {
   /* opacity: 0.9 !important;*/
-  color: grey !important;
+  color: #A15589 !important;
   border-left: 3px solid grey;
   padding-left: 3px;
   transition: all ease 0.2s;
 }
+
 
 /* Cards section */
 .CategoryDevider {
@@ -185,15 +187,24 @@
   text-align: right;
 }
 
+.cc:active {
+  background: #A15589 !important;
+}
+.cc.active-category{
+  background: #A15589 !important;
+  color: white !important;
+  transition: all ease 0.2s;
+}
+
 .recommended {
   border-radius: 8px;
-  background: #007bff !important;
+  background: #2D81F7 !important;
   color: white;
   padding: 5px;
   padding-left: 6px !important;
 }
 .recommended:hover {
-  background-color: #08bd80 !important;
+  background-color: #2D81F7 !important;
   color: white !important;
   transition: all ease 0.2s;
 }

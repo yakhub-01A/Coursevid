@@ -2,6 +2,7 @@
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
+    
 }
 
 .Preference-buttons button{
@@ -10,7 +11,7 @@
     border-radius: 10px;
     margin-right:20px;
     margin-bottom:20px;
-    border:2px solid #08BD80;
+    border:2px solid #A15589;
     background-color: white;
     font: normal normal 20px/22px Gilroy;
     letter-spacing: 0.72px; 
@@ -20,7 +21,7 @@
 .SumbitBtn{
    display: flex;
    justify-content: center;
-   margin-top: 100px;
+   margin-top: 30px;
   
    
 
@@ -32,20 +33,19 @@
     border-radius: 7px;
     font: normal normal 20px/22px Gilroy;
     letter-spacing: 0.72px;
-    background:#08BD80;
+    background:#A15589;
     color:white;
    
 }
 
 .Preference-buttons button:hover{
    
-    background-color: rgba(8, 189, 129, 0.671);
+    background-color: #A15589;
     color:white;
 
 }
 
 .touched{
-    background-color: #08BD80!important;
     color:white;
 
 }
