@@ -54,12 +54,18 @@
   font: normal normal normal 23px/17px Gilroy;
   letter-spacing: 1.19px;
   color: white;
-  background: #3a88f7;
+  background: #A15589;
   padding: 10px;
   border-radius: 4px;
   margin: 0;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+.link{
+  text-decoration:none !important;
+}
+.Course_live_classes:hover{
+  background: #5c5e5f;
 }
 
 .ratingtimesUpdated {

@@ -36,7 +36,7 @@ class VideoList extends Component{
                 </div>     
 
                 <div className="video-duration">
-                    <span>4.22</span>  
+                     
           
                 </div> 
 

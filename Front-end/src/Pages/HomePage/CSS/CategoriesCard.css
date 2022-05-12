@@ -15,6 +15,7 @@
   margin-bottom: 20px;
   border-left: 3px solid transparent;
   padding-left: 3px;
+  border-radius: 8in;
 }
 
 .CategoriesSlider {
@@ -54,6 +55,7 @@
 
 .buttons__box{
   display: flex;
+  margin-bottom: 30px;
 }
 
 .coursecard__btnactive{
@@ -63,14 +65,20 @@
   letter-spacing: 0.47px;
   color: #fff;
   border-radius:5px ;
-  margin-left:10px;
-  width: 50%;
+  width: 130px;
+  margin: 5px;
+  
+  display: inline-block;
+  align-items: center;
+}
+.b{
+  margin-left: 25px;
+  cursor: pointer; 
 }
 
 .active-category {
   width: 100%;
   background: #A15589 0% 0% no-repeat padding-box !important;
-  border-radius: 8px;
   opacity: 1;
   padding: 4px;
   padding-left: 6px;
@@ -78,16 +86,22 @@
   letter-spacing: 0px;
   color: white;
   opacity: 1;
+  border-radius: 8in !important;
 }
 .active-category:active{
   background:#A15589 !important;
+  
 }
 .ListOfCourses > *:hover {
-  /* opacity: 0.9 !important;*/
-  color: #A15589 !important;
+  opacity: 0.8 !important;
   border-left: 3px solid grey;
   padding-left: 3px;
+  background-color: #2D81F7 !important;
+  color: white !important;
   transition: all ease 0.2s;
+  border-radius: 8in;
+  padding: 5px;
+  padding-left: 6px !important;
 }
 
 
@@ -98,12 +112,10 @@
 
 .Course-Cards {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: 0px;
-  margin-bottom: 40px;
-
-  overflow: hidden;
-  overflow: hidden;
+  align-items: flex-start;
+  margin-right: 30px;
+  
+  
 }
 
 .CategoriesTitle {
@@ -111,9 +123,11 @@
 }
 
 .my-card {
-  margin-left: 20px;
   display: flex;
   flex-direction: column;
+  max-width: fit-content;
+  max-height: 250px;
+  margin-left: 0px;
 }
 
 .CategoriesTitle {
@@ -124,9 +138,10 @@
 }
 
 .my-card img {
-  width: 290px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
+  margin: 0%;
 }
 
 .Course-Devider {
@@ -189,7 +204,14 @@
 
 .cc:active {
   background: #A15589 !important;
+  border-radius: 8in;
 }
+
+.recommended:active {
+  background: #08BD80 !important;
+  opacity: 0.8;
+}
+
 .cc.active-category{
   background: #A15589 !important;
   color: white !important;
@@ -197,11 +219,9 @@
 }
 
 .recommended {
-  border-radius: 8px;
-  background: #2D81F7 !important;
-  color: white;
-  padding: 5px;
-  padding-left: 6px !important;
+  border-radius: 8in;
+  background: none !important;
+  color: black !important;
 }
 .recommended:hover {
   background-color: #2D81F7 !important;
@@ -225,11 +245,6 @@
   .CategoriesTitle {
     text-align: center;
   }
-
-  .Course-Cards {
-    margin-left: 20px;
-    margin-bottom: 40px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -247,6 +262,12 @@
   }
   .my-card {
     margin: 0px;
+  }
+  .coursecard__btnactive{
+    width: 100px;
+  }
+  .b{
+    margin-left: 30px;
   }
   .CategoriesTitle {
     font: normal normal 20px/38px Gilroy;
