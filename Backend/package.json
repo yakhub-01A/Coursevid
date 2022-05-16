@@ -29,7 +29,8 @@
     "pdfkit": "^0.12.1",
     "redis": "^3.1.2",
     "socket.io": "^4.4.1",
-    "stripe": "^8.145.0"
+    "stripe": "^8.145.0",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "jest": "^27.1.1",

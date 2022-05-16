@@ -10,6 +10,7 @@ import Google_logo from '../../../../components/UI/Logo/google';
 import GoogleLogin from 'react-google-login';
 import SumbitButton from '../../../../components/UI/Buttons/SumbitButton';
 import Alert from '../alert';
+import swal from 'sweetalert';
 
 class Login extends Component {
 

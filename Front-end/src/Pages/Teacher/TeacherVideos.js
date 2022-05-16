@@ -233,7 +233,7 @@ class TeacherPage extends Component{
                     <input type="file" name='file'
                     
                     onChange={(event)=> this.fileSelectorHandler(event,1)}/>
-                    Upload Video1
+                    Upload Demo Video
                 </label>
 
                 <p className="VideoName">{fileName1}</p>
@@ -252,7 +252,7 @@ class TeacherPage extends Component{
                 <label className="videoUpload">
                     <input type="file" name='file' 
                     onChange={(event)=> this.fileSelectorHandler(event,2)}/>
-                    Upload Video2
+                    Upload Video1
             </label>
 
             <p className="VideoName">{fileName2}</p>
@@ -269,7 +269,7 @@ class TeacherPage extends Component{
                 <label className="videoUpload">
                     <input type="file" name='file' 
                     onChange={(event)=> this.fileSelectorHandler(event,3)}/>
-                    Upload Video3
+                    Upload Video2
             </label>
 
             <p className="VideoName">{fileName3}</p>
@@ -286,7 +286,7 @@ class TeacherPage extends Component{
                 <label className="videoUpload">
                     <input type="file" name='file' 
                     onChange={(event)=> this.fileSelectorHandler(event,4)}/>
-                    Upload Video4
+                    Upload Video3
             </label>
 
             <p className="VideoName">{fileName4}</p>
@@ -303,7 +303,7 @@ class TeacherPage extends Component{
                 <label className="videoUpload">
                     <input type="file" name='file' 
                    onChange={(event)=> this.fileSelectorHandler(event,5)}/>
-                    Upload Video5
+                    Upload Video4
                 </label>
 
             <p className="VideoName">{fileName5}</p>

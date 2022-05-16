@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { connect } from "react-redux";
 import * as actionCreators from "../../store/actions/actions";
 import Categories from './Categories';
 import HomeBanner from './HomeBanner';
 import CourseCards from './CourseCards';
-import CourseEnroll_Demo from './CourseEnroll_Demo';
 import CourseTitle from './CourseTitle';
 import { Redirect, NavLink } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
@@ -12,19 +11,24 @@ import Layout from '../../components/Layout/Layout'
 import Recommendation from './Recommendation';
 import './CSS/Homepage.css';
 import Url from '../../ApiServices/BackendUrl';
-
+import './CSS/CategoriesCard.css';
+import Modal from 'react-modal';
+import ModalVideo from 'react-modal-video'
+import 'D:/Coursevid/Front-end/node_modules/react-modal-video/scss/modal-video.scss';
 
 class Homepage extends Component {
 
     IsMounted = false;
 
     state = {
+        isOpen: false,
         CourseLink: this.props.match.params.CourseName,
         Courses: this.props.Courses,
         loading: true,
         img: "",
         progress: 0,
         redirect: null,
+        demoUrl: ''
     }
 
 
@@ -48,6 +52,12 @@ class Homepage extends Component {
 
     componentWillUnmount() {
         this.IsMounted = false;
+    }
+    openModal(courseData) {
+        console.log(courseData, '89', courseData['videoContent'][0]['videoUrl'])
+        this.setState({ demoUrl: courseData['videoContent'][0]['videoUrl'] }, () => {
+            this.setState({ isOpen: true })
+        })
     }
 
     render() {
@@ -86,9 +96,10 @@ class Homepage extends Component {
 
 
             data = (
+
                 CourseArray.map(item => {
                     let rating = [item ? item.rating.ratingFinal : 0];
-                    if (rating === 0) rating = 1;
+                    if (rating === 0) rating = 5;
 
                     return (
                         <div className="course_card">
@@ -103,7 +114,13 @@ class Homepage extends Component {
                                     price={item.price}
                                     ratingtimesUpdated={item.rating.timesUpdated} />
                             </NavLink>
-                            <CourseEnroll_Demo/>
+                            <ModalVideo channel='custom' isOpen={this.state.isOpen} url={`http://localhost:8080/${this.state.demoUrl}`} onClose={() => this.setState({ isOpen: false })} />
+                            <div className="buttons__box" >
+                                <div className="b">
+                                    <button className="coursecard__btnactive" onClick={() => { this.openModal(item) }}>Watch Demo</button>
+                                    <button className="coursecard__btnactive">Enroll Now!</button>
+                                </div>
+                            </div>
                         </div>
                     )
 
@@ -155,7 +172,9 @@ class Homepage extends Component {
 
 
                 </div>
+
             </Layout>
+
         );
     }
 

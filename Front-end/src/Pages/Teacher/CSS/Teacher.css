@@ -169,8 +169,8 @@ input[type="file"] {
 }
 .videoUpload{
 
-    width: 175px;
-    height: 49px;
+    width: 200px;
+    height: 100%;
     background: #2D81F7 0% 0% no-repeat padding-box;
     border-radius: 8px;
     opacity: 1;
