@@ -59,14 +59,14 @@ class CartCard extends Component{
                                 
                                 <div className="CardParent3">
                                     <p className="CoursePrice">₹ {this.props.price}</p>
-                                    <p className="CourseWhishlist">Move to Whishlist</p>
+                                    {/* <p className="CourseWhishlist">Move to Whishlist</p> */}
                                 </div>
 
-                                <div className="CourseBuy">
+                                {/* <div className="CourseBuy">
                                     <Link to={`/stripe/${this.props.courseId}`} style={{textDecoration:"none"}}> 
                                         <p>Buy Now</p>
                                     </Link>
-                                 </div>
+                                 </div> */}
 
 
                     </div>

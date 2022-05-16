@@ -61,7 +61,7 @@ const Navbar = ()=>{
       <li className="nav-item">
         <NavLink to="/Cart" className="nav-link "> 
         <i data-toggle="tooltip" data-placement="top" title="Bookmarked Courses"
-         className="fa fa-book" aria-hidden="true"><span id="bookmarkNav"> Bookmark</span></i></NavLink>
+         className="fa fa-book" aria-hidden="true"><span id="bookmarkNav"> Enrolled courses</span></i></NavLink>
        
       </li>
 

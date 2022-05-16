@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TeacherCategory from './TeacherCatergory';
 import HomeBanner from '../../HomePage/HomeBanner';
 import CourseTitle from '../../HomePage/CourseTitle';
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import TeacherCard from './TeacherCard';
 import Layout from '../../../components/Layout/Layout';
@@ -11,72 +11,109 @@ import Url from '../../../ApiServices/BackendUrl';
 import '../../HomePage/CSS/Homepage.css';
 import { connect } from "react-redux";
 import * as actionCreators from "../../../store/actions/actions";
-
+import swal from 'sweetalert';
 
 class TeacherHomePage extends Component {
     state = {
         // CourseLink: this.props.match.params.CourseName,
-         Courses: null,
-         loading: true,
-         redirect:null,
+        Courses: null,
+        loading: true,
+        redirect: null,
         // img: "",
     }
 
 
-    componentDidMount(){
+    componentDidMount() {
 
-        const fd =new FormData();
+        const fd = new FormData();
         const form = {};
         form['userId'] = localStorage.getItem('userId');
-        fd.append("userId",localStorage.getItem('userId'))
-              
-                AuthServices.TeacherHomePage(form)
-                .then(response => {
-                    console.log("Teacher Uploaded Courses",response);
-                    this.setState({Courses: response.data.data});
-                    this.setState({loading:false});
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-    }
-    
+        fd.append("userId", localStorage.getItem('userId'))
 
-    DeleteCourse=(id)=> {
-        const form ={};
-        form['courseId']=id;
-        let answer =  window.confirm("Are you sure to delete this course?")
-        if(answer){
-            AuthServices.TeacherCourseDelete(form)
+        AuthServices.TeacherHomePage(form)
             .then(response => {
-                console.log("Removed Course",response);
-                this.props.RemoveCourseFromStore(id);
-               
-                 const updatedCourse =[...this.state.Courses];
-        
-                 for(let i=0;i<this.state.Courses.length;i++){
-                     
-                     if(id=== this.state.Courses[i]._id){
-                        updatedCourse.splice(i,1);
-                     }
-                 this.setState({Courses:updatedCourse})
-      
-                
-            }})
+                console.log("Teacher Uploaded Courses", response);
+                this.setState({ Courses: response.data.data });
+                this.setState({ loading: false });
+            })
             .catch(error => {
                 console.log(error);
             })
-        }
-        
-    }    
-
-
-    render(){
-
-    if(this.state.redirect){
-        return <Redirect to={this.state.redirect}/>
     }
-    let welcomeMessage=null;
+
+
+    DeleteCourse = (id) => {
+        const form = {};
+        form['courseId'] = id;
+        // let answer = window.confirm("Are you sure to delete this course?")
+        swal({
+            title: "Are you sure?",
+            text: "Are you sure to delete this course?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                swal("Your course has been deleted!", {
+                    icon: "success",
+
+                });
+                AuthServices.TeacherCourseDelete(form)
+                    .then(response => {
+                        console.log("Removed Course", response);
+                        this.props.RemoveCourseFromStore(id);
+
+                        const updatedCourse = [...this.state.Courses];
+
+                        for (let i = 0; i < this.state.Courses.length; i++) {
+
+                            if (id === this.state.Courses[i]._id) {
+                                updatedCourse.splice(i, 1);
+                            }
+                            this.setState({ Courses: updatedCourse })
+
+
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+            } else {
+                swal("Your course is safe!");
+            }
+        });
+        // if (answer) {
+        //     AuthServices.TeacherCourseDelete(form)
+        //         .then(response => {
+        //             console.log("Removed Course", response);
+        //             this.props.RemoveCourseFromStore(id);
+
+        //             const updatedCourse = [...this.state.Courses];
+
+        //             for (let i = 0; i < this.state.Courses.length; i++) {
+
+        //                 if (id === this.state.Courses[i]._id) {
+        //                     updatedCourse.splice(i, 1);
+        //                 }
+        //                 this.setState({ Courses: updatedCourse })
+
+
+        //             }
+        //         })
+        //         .catch(error => {
+        //             console.log(error);
+        //         })
+        // }
+
+    }
+
+
+    render() {
+
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+        }
+        let welcomeMessage = null;
 
         let data = (<Loader
             type="Puff"
@@ -85,60 +122,60 @@ class TeacherHomePage extends Component {
             width={50}
             className="loader"
 
-             //3 secs
-    
-         />);
+        //3 secs
 
-        if(!this.state.loading){
-           
-            let CourseArray= this.state.Courses.slice(0);
+        />);
+
+        if (!this.state.loading) {
+
+            let CourseArray = this.state.Courses.slice(0);
 
             data = (
-              CourseArray.map((item,index) =>  
+                CourseArray.map((item, index) =>
 
-                <TeacherCard  
-                    key={index}
-                    title={item.title}
-                    teacher={item.name}
-                    img={Url + item.imageurl}
-                    rating={parseInt(item.rating.ratingFinal)}
-                    Link={`/course/${this.state.CourseLink}/${item._id}`}
-                    CourseId={item._id}
-                    price={item.price}
-                    DeleteCourse={()=>this.DeleteCourse(item._id)}
-                />)
-    
+                    <TeacherCard
+                        key={index}
+                        title={item.title}
+                        teacher={item.name}
+                        img={Url + item.imageurl}
+                        rating={parseInt(item.rating.ratingFinal)}
+                        Link={`/course/${this.state.CourseLink}/${item._id}`}
+                        CourseId={item._id}
+                        price={item.price}
+                        DeleteCourse={() => this.DeleteCourse(item._id)}
+                    />)
+
             );
-            
-            if(CourseArray.length!==0){
-                welcomeMessage =  <CourseTitle welcomeMessage ={"Here are your courses, " }/>;
+
+            if (CourseArray.length !== 0) {
+                welcomeMessage = <CourseTitle welcomeMessage={"Here are your courses, "} />;
             }
-            else{
-                welcomeMessage = <CourseTitle welcomeMessage ={"You haven't Uploaded any courses yet "}/>;
+            else {
+                welcomeMessage = <CourseTitle welcomeMessage={"You haven't Uploaded any courses yet "} />;
             }
-           
-            };
-        
-        return(
-          <Layout navbar={"teacher"}>
-            <div className="container">
 
-                <HomeBanner className="teacherBannner" img={null}/>
+        };
 
-                <div className="mt-5 Course-Content"> 
-                    <TeacherCategory/>
+        return (
+            <Layout navbar={"teacher"}>
+                <div className="container">
 
-                    <div className="Course-Content-col">
+                    <HomeBanner className="teacherBannner" img={null} />
 
-                        {welcomeMessage}
+                    <div className="mt-5 Course-Content">
+                        <TeacherCategory />
 
-                                <div className="Course-Content-wrap">
-                                    {data}
-                                </div>
+                        <div className="Course-Content-col">
+
+                            {welcomeMessage}
+
+                            <div className="Course-Content-wrap">
+                                {data}
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </Layout>
+            </Layout>
         );
     }
 
@@ -146,9 +183,9 @@ class TeacherHomePage extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        RemoveCourseFromStore:(data)=>dispatch(actionCreators.RemoveCourseFromStore(data)),
+        RemoveCourseFromStore: (data) => dispatch(actionCreators.RemoveCourseFromStore(data)),
         //  fetchPreferenceCourses:(CourseLink,form)=>dispatch(actionCreators.fetchAsyncPreferenceCourse(CourseLink,form))
     };
-  };
+};
 
 export default connect(null, mapDispatchToProps)(TeacherHomePage);

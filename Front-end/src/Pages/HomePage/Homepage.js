@@ -118,7 +118,6 @@ class Homepage extends Component {
                             <div className="buttons__box" >
                                 <div className="b">
                                     <button className="coursecard__btnactive" onClick={() => { this.openModal(item) }}>Watch Demo</button>
-                                    <button className="coursecard__btnactive">Enroll Now!</button>
                                 </div>
                             </div>
                         </div>

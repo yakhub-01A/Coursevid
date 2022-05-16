@@ -1,6 +1,7 @@
 import ReactStars from "react-rating-stars-component";
 import React, {Component} from "react";
 import AuthServices from "../../ApiServices/auth.service";
+import swal from 'sweetalert';
 
 class Rating extends Component {
     render(){
@@ -18,7 +19,11 @@ class Rating extends Component {
                 .then(response => {
                     console.log("Rating",response);
                     this.setState({loading:false});
-                    alert("Your rating has successfully added")
+                    swal({
+                        title: "Done",
+                        icon: "Success",
+                        text: "Your rating has successfully added"
+                    })
                 })
                 .catch(error => {
                     console.log(error);

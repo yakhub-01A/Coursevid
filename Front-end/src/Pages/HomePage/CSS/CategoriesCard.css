@@ -66,14 +66,14 @@
   color: #fff;
   border-radius:5px ;
   width: 130px;
-  margin: 5px;
+  margin-left: 55px;
   
   display: inline-block;
   align-items: center;
 }
 .b{
-  margin-left: 25px;
-  cursor: pointer; 
+  display: flex;
+  margin-left: 35px;
 }
 
 .active-category {
@@ -221,7 +221,7 @@
 .recommended {
   border-radius: 8in;
   background: none !important;
-  color: black !important;
+  color: #3c4852 !important;
 }
 .recommended:hover {
   background-color: #2D81F7 !important;

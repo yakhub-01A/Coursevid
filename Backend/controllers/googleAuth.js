@@ -87,7 +87,7 @@ exports.googleLogin = (req,res)=>{
 
                 if(!user){
                     // user doesnt exist
-                    res.status(404).json({message:"User's accout doesnt exist!",username:user.name,userId:user._id})
+                    res.status(404).json({message:"User's accout doesnt exist!"})
                 }
 
                else {

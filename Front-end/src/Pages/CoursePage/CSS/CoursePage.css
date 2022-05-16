@@ -7,6 +7,12 @@
   height: auto;
 }
 
+div.is-disabled
+{
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 .Section2 {
   display: flex;
   flex-wrap: wrap;

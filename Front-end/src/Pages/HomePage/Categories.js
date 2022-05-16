@@ -31,7 +31,7 @@ const Categories = (props) => {
 
                     }} />
                     <NavLink to='/home/preferences' className="recommended" activeClassName="active-category">Recommended!</NavLink>
-                    <NavLink to='/home/Enrolled' className="recommended" activeClassName="active-category">Enrolled!</NavLink>
+                    <NavLink to='/Cart' className="recommended" activeClassName="active-category">Enrolled!</NavLink>
 
                 </div>
 
@@ -53,7 +53,7 @@ const Categories = (props) => {
                 <NavLink to='/home/Science Basket' activeClassName="Sactive-category">Science Basket</NavLink>
                 <NavLink to='/home/Humanities Basket' activeClassName="Sactive-category">Humanities Basket</NavLink>
                 <NavLink to='/home/preferences' className="recommended" activeClassName="active-category">Recommended!</NavLink>
-                <NavLink to='/home/Enrolled' className="recommended" activeClassName="active-category">Enrolled!</NavLink>
+                <NavLink to='/Cart' className="recommended" activeClassName="active-category">Enrolled!</NavLink>
             </div>
 
 
